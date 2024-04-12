@@ -1,0 +1,255 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+body {
+  background: rgb(196, 194, 231);
+  background: radial-gradient(circle,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(30, 54, 59, 1) 0%,
+      rgba(93, 93, 116, 1) 100%);
+}
+
+.container {
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  max-width: 500px;
+  width: 100%;
+  margin: auto;
+}
+
+.container>form {
+  width: 70%;
+  border: 1px solid #dfdfdf;
+  padding: 20px;
+  border-radius: 55px;
+  background: gainsboro;
+}
+.field{
+  margin: auto;
+  text-align: center;
+  height: 50px;  
+  width: 60%;
+  display: grid;
+  font-weight: 500;
+  
+}
+
+.forgotpass{
+  color: blueviolet;
+  float: right;
+}
+.marstag{
+  float: right;
+  color: rgb(51, 50, 52);
+  
+}
+pre {
+  width: 70%;
+  color: #fff;
+  font-size: larger;
+}
+
+button {
+  background:red!important;
+  justify-content: center;
+  margin: auto;
+  display: flex;
+  width: 120px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+p {
+  color: red;
+}
+
+.ui_message_success {
+  width: 25%;
+  height: 20px;
+  border: 1px solid #e51313;
+  padding: 10px;
+  border-radius: 8px;
+  background: rgb(185, 185, 238);
+  justify-content: center;
+  margin :auto
+}
+
+.image {
+  display: flex;
+  position: absolute;
+  height: 100vh;
+  width: 200vb;
+  padding: 30px;
+  /* background-image: url('./Images/login\ background.png');  */
+}
+
+.show{
+  position: absolute;
+  top: 32%;
+  right: 32%;
+
+
+}
+/* .wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  text-align: center;
+}
+
+.wrapper>* {
+  padding: 1px;
+  margin: 1px;
+  flex: 1 100%;
+  border-radius: 10px;
+}
+
+.header {
+  background: tomato;
+  height: 100px;
+}
+
+.footer {
+  background: lightgreen;
+  height: 80px;
+}
+
+.aside1 {
+  background: gold;
+  height: 550px;
+}
+
+.aside2 {
+  background: hotpink;
+}
+@media all and (min-width:800px){
+  .aside1{
+    order: 1;
+  }
+
+  .aside2{
+    order: 2;
+  }
+  .footer{
+    order: 4;
+  }
+  .header{
+    order: 1;
+  }
+}
+@media all and (min-width :600px){
+  .aside{
+    flex: 1;
+  }
+} */
+
+.wrapper {
+  display: grid;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  grid-template-columns: 100%;
+  grid-template-rows: 3fr 5fr 5fr 5fr;
+  grid-template-areas: 'aside1' 'header''aside2''footer';
+ 
+
+}
+
+.wrapper>* {
+
+  grid: 1 100%;
+ 
+}
+
+.header {
+  background:gainsboro;
+  height: 120px;
+  width: 655px;
+  grid-area: header;
+  flex-wrap: wrap;
+  background-image: url('./Images/headerlogo.png');
+}
+
+.footer {
+  background: lightgreen;
+  height: 330px;
+  grid-area: footer;
+  background-image: url('./Images/footer1.png');
+
+}
+.aside1 {
+  background: gold;
+  height: 420px;
+  width: 490px;
+  grid-area: aside1;
+  background-image: url('./Images/aside1.png');
+  
+}
+.aside2 {
+  background:gainsboro;
+  height: 300px;
+  width: 655px;
+  grid-area: aside2;
+}
+@media only screen and (min-width:800px){
+
+  .wrapper {
+    display: grid;
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 2fr 5fr 5fr 5fr;
+    grid-template-areas: 'aside1 aside1 header header'
+                        'aside1 aside1 aside2 aside2'
+                        'footer footer footer footer';
+  
+  }
+}
+.password-toogle-icon{
+  position: absolute;
+  top:8px;
+  right: 10px;
+  z-index: 1000;
+  cursor: pointer;
+}
